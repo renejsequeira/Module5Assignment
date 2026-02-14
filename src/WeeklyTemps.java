@@ -64,7 +64,7 @@ public class WeeklyTemps {
 			break;
 			
 		default:
-			System.out.println("No info entered.");
+			System.out.println("Week or Daily Temperature not available.....");
 		}
 		
 
