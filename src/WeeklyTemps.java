@@ -1,3 +1,10 @@
+/**
+ * Rene Sequeira
+ * Module 5 Critical Thinking Assignment
+ * GitHub Repo: https://github.com/renejsequeira/Module5Assignment.git
+ */
+
+//import library for scanner objects and array list methods
 import java.util.*;
 
 
@@ -6,9 +13,16 @@ public class WeeklyTemps {
 
 	public static void main(String[] args) {
 		
+		//create scanner class object for input
 		Scanner day = new Scanner(System.in);
+		
+		//declare variable to store input
 		String choice =  " ";
+		
+		//declare variable to store total weekly temperature
 		int totalTemp = 0;
+		
+		//use Arraylist class to create two arrays to store week days and daily temperatures
 		ArrayList<String> dayOfTheWeek =new ArrayList<String>();
 		ArrayList<Integer> dailyTemperature = new ArrayList<Integer>();
 		dayOfTheWeek.add("Suday");
@@ -27,9 +41,13 @@ public class WeeklyTemps {
 		dailyTemperature.add(80);
 		dailyTemperature.add(85);
 		
+		//display prompt
 		System.out.println("Please enter day of the week or week for daily temperatures: ");
+		
+		//assign prompt input to choice variable
 		choice =  day.nextLine();
 		
+		//use switch statement for choice selection
 		switch(choice){
 		case "Sunday": 
 			System.out.println(dayOfTheWeek.get(0) + " " + dailyTemperature.get(0));
@@ -66,6 +84,9 @@ public class WeeklyTemps {
 		default:
 			System.out.println("Week or Daily Temperature not available.....");
 		}
+		
+		//close scanner object for memory leak prevention
+		day.close();
 		
 
 	}
