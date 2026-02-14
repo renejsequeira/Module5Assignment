@@ -8,6 +8,7 @@ public class WeeklyTemps {
 		
 		Scanner day = new Scanner(System.in);
 		String choice =  " ";
+		int totalTemp = 0;
 		ArrayList<String> dayOfTheWeek =new ArrayList<String>();
 		ArrayList<Integer> dailyTemperature = new ArrayList<Integer>();
 		dayOfTheWeek.add("Suday");
@@ -53,8 +54,13 @@ public class WeeklyTemps {
 			break;
 		case "week":
 			System.out.println("Daily Temperatures:");
+			for(int i =0;i < dailyTemperature.size(); i++) {
+				System.out.println(dailyTemperature.get(i));
+				totalTemp += dailyTemperature.get(i);
+			}
+			System.out.println("Week Temperature Average: "+
+			totalTemp / dailyTemperature.size());
 			
-			System.out.println("Week Temperature Average: ");
 			break;
 			
 		default:
